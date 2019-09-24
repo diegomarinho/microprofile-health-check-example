@@ -28,9 +28,9 @@ import javax.ws.rs.core.Response;
 public class ObservabilityController extends ServiceHealthCheck {
 
     @GET
-    @Operation(description = "Getting HealthCheck")
+    @Operation(description = "Metrics to monitor the HealthCheck")
     @APIResponses({
-            @APIResponse(responseCode = "200", description = "Successful, returning HealthCheck",
+            @APIResponse(responseCode = "200", description = "Successful, returning if app is UP",
                     content = @Content(schema = @Schema(implementation = HealthCheckResponse.class)))
     })
     public Response getHealthCheck(
